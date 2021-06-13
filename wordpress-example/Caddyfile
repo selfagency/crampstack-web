@@ -1,0 +1,25 @@
+http://0.0.0.0:{$PORT} {
+  root * /var/www/html/
+  php_fastcgi 0.0.0.0:9000
+
+  @uploads {
+    path_regexp path /uploads\/(.*)\.php
+  }
+  rewrite @uploads /
+
+  @wp-admin {
+    path not ^\/wp-admin/*
+  }
+  rewrite @wp-admin {path}/index.php?{query}
+
+  encode gzip
+
+  file_server {
+    hide .env
+  }
+
+  log {
+    output file /var/log/caddy.log
+	  format json
+  }
+}

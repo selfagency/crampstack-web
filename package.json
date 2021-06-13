@@ -1,6 +1,6 @@
 {
   "name": "@selfagency/crampstack-web",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Caddy Redis Alpine MySQL PHP (CRAMP) Stack Web Layer",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/selfagencyllc/selfagency-php.git"
+    "url": "git+https://github.com/selfagency/crampstack-web.git"
   },
   "keywords": [],
   "author": "Daniel Sieradski <help@self.agency> (https://self.agency/)",
@@ -20,5 +20,10 @@
   "devDependencies": {
     "@semantic-release-plus/docker": "^2.3.3",
     "semantic-release": "^17.4.3"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
   }
 }

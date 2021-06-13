@@ -1,0 +1,42 @@
+{
+  "name": "selfagency/crampstack-wordpress",
+  "description": "CRAMPStack WordPress application example",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Daniel Sieradski",
+      "email": "help@self.agency",
+      "homepage": "https://self.agency"
+    }
+  ],
+  "config": {
+    "vendor-dir": "vendor",
+    "cache-files-ttl": 0
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "composer/installers": "*",
+    "johnpbloch/wordpress": "*",
+    "mnsami/composer-custom-directory-installer": "*",
+    "wpackagist-plugin/akismet": "*",
+    "wpackagist-plugin/classic-editor": "*",
+    "wpackagist-theme/inspiro": "*"
+  },
+  "extra": {
+    "installer-paths": {
+      "wordpress/wp-content/plugins/{$name}": [
+        "type:wordpress-plugin"
+      ],
+      "wordpress/wp-content/themes/{$name}": [
+        "type:wordpress-theme"
+      ]
+    },
+    "wordpress-install-dir": "wordpress"
+  }
+}
