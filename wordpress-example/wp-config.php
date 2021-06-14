@@ -3,8 +3,8 @@
 $dev = $_ENV['ENVIRONMENT'] === 'development' ? true : false;
 
 /* WordPress general settings */
-define('WP_HOME',  'https://' . env('RAILWAY_STATIC_URL'));
-define('WP_SITEURL', 'https://' . env('RAILWAY_STATIC_URL'));
+define('WP_HOME',  'https://' . $_ENV['STATIC_URL']);
+define('WP_SITEURL', 'https://' . $_ENV['STATIC_URL']);
 
 $table_prefix = $_ENV['WORDPRESS_TABLE_PREFIX'];
 
