@@ -24,6 +24,8 @@
     "composer/installers": "*",
     "johnpbloch/wordpress": "*",
     "mnsami/composer-custom-directory-installer": "*",
+    "wp-cli/wp-cli": "*",
+    "wp-cli/wp-cli-bundle": "*",
     "wpackagist-plugin/akismet": "*",
     "wpackagist-plugin/classic-editor": "*",
     "wpackagist-theme/inspiro": "*"
