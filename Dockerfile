@@ -15,6 +15,7 @@ RUN apk add --no-cache \
   micro \
   nss-tools \
   openssl-dev \
+  socat \
   unzip \
   wget \
   zlib;

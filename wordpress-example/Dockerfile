@@ -17,6 +17,10 @@ COPY --from=vendor --chown=www-data:www-data /tmp/composer/wordpress /var/www/ht
 # Copy Composer support files
 COPY --from=vendor --chown=www-data:www-data /tmp/composer/vendor /var/www/html/vendor/
 
+# Copy themes and plugins from repo
+COPY ./wp-content/themes/* /var/www/html/wp-content/themes/
+#COPY ./wp-content/plugins/* /var/www/html/wp-content/plugins/
+
 # Copy custom files
 COPY --chown=www-data:www-data wp-config.php /var/www/html/wp-config.php
 COPY Caddyfile /etc/caddy/Caddyfile

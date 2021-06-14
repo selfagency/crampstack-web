@@ -204,7 +204,6 @@ temp/
 # Note: If you wish to whitelist plugins,
 # uncomment the next line
 /wordpress
-/wp-content/plugins
 
 # All themes
 # Note: If you wish to whitelist themes,

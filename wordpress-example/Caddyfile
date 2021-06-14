@@ -1,9 +1,9 @@
-http://0.0.0.0:{$PORT} {
+:80 {
   root * /var/www/html/
-  php_fastcgi 0.0.0.0:9000
+  php_fastcgi :9000
 
   @uploads {
-    path_regexp path /uploads\/(.*)\.php
+    path_regexp path /wp-content/uploads\/(.*)\.php
   }
   rewrite @uploads /
 
